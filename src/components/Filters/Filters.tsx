@@ -1,8 +1,8 @@
 import React from 'react';
 import { Select } from 'antd';
-import { languages, rank } from './constants';
-import st from './app.module.scss';
-import { FiltersProps } from './types';
+import { languages, rank } from '../../constants';
+import st from './filters.module.scss';
+import { FiltersProps } from '../../types';
 
 const Filters = ({ handleChangeKyu, handleChangeLanguage }: FiltersProps) => {
   return (

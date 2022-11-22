@@ -1,9 +1,9 @@
 import React from 'react';
 import { Collapse } from 'antd';
-import { challengeList, languages } from './constants';
-import st from './app.module.scss';
+import { challengeList, languages } from '../../constants';
+import st from './challenge.module.scss';
 import Markdown from 'markdown-to-jsx';
-import { ChallengeListProps } from './types';
+import { ChallengeListProps } from '../../types';
 
 const { Panel } = Collapse;
 

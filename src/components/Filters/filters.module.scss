@@ -1,0 +1,17 @@
+.filters {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  margin: 12px 0;
+  background: #004BFF;
+  border-radius: 4px;
+
+  &_item {
+    min-width: 120px;
+    width: 100%;
+    flex-grow: 1;
+  }
+}
