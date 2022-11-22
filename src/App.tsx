@@ -1,26 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Collapse } from 'antd';
+import st from './app.module.scss';
+import ChallengeList from './ChallengeList';
+import Filters from './Filters';
 
-function App() {
+const App = () => {
+  const [chooseKyu, setKyu] = React.useState<string | null>(null);
+  const [chooseLanguage, setLanguage] = React.useState<string | null>(null);
+
+  const handleChangeKyu = (value: string | null) => {
+    return setKyu(value);
+  };
+
+  const handleChangeLanguage = (value: string | null) => {
+    setLanguage(value);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={st.App}>
+      <Filters handleChangeKyu={handleChangeKyu} handleChangeLanguage={handleChangeLanguage} />
+      <ChallengeList chooseKyu={chooseKyu} chooseLanguage={chooseLanguage} />
     </div>
   );
-}
+};
 
 export default App;
